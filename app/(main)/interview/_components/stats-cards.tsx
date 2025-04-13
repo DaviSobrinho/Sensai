@@ -71,7 +71,7 @@ const StatsCard: React.FC<any> = ({ assessments }: any) => {
                 </CardHeader>
                 <CardContent>
                     <div className='text-2xl font-bold'>
-                        {getLatestAssessment().quizScore.toFixed(1) || 0}%
+                        {(getLatestAssessment() && getLatestAssessment().quizScore !== null ? getLatestAssessment().quizScore.toFixed(1) : 0)}%
                         <p className='text-xs text-muted-foreground'>
                             Most recent quiz
                         </p>
