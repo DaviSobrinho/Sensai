@@ -6,7 +6,6 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Label } from "@/components/ui/label"
 import { RadioGroupItem, RadioGroup } from "@/components/ui/radio-group"
 import useFetch from "@/hooks/use-fetch"
-import { Loader2 } from "lucide-react"
 import { useEffect, useState } from "react"
 import { BarLoader } from "react-spinners"
 import { toast } from "sonner"
@@ -83,7 +82,6 @@ const Quiz = () => {
         return <BarLoader className="mt-4" width={"100%"} color="gray" />;
     }
 
-    // Show results if quiz is completed
     if (resultData) {
         return (
             <div className="mx-2">

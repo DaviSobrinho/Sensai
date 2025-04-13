@@ -1,4 +1,3 @@
-import { unknown } from "zod";
 import { db } from "../prisma";
 import { inngest } from "./client";
 import { GoogleGenerativeAI } from "@google/generative-ai";
