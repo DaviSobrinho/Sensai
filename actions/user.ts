@@ -19,14 +19,11 @@ export async function updateUser(data: any) {
     try {
         const result = await db.$transaction(
             async (tx: any) => {
-                console.log("tx", db.industry)
                 let industryInsight = await tx.industryInsight.findUnique({
                     where: {
                         industry: data.industry
                     }
                 })
-                console.log("user.industry",user.industry)
-                console.log("data.industry",data.industry)
                 if (!industryInsight) {
                     const insights = await generateAIInsights(data.industry)
                     industryInsight = await db.industryInsight.create({

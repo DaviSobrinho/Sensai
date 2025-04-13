@@ -12,6 +12,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "noImplicitUseStrict": false,
     "incremental": true,
     "plugins": [
       {
@@ -22,6 +23,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/api/inngest/inngest.ts", "app/inngest/functions.ts", "app/inngest/client.ts", "app/data/faqs.js", "app/data/features.js", "app/data/features.js", "app/(main)/ai-cover-letter/[id]/page.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/api/inngest/inngest.ts", "app/inngest/functions.ts", "app/inngest/client.ts", "app/data/faqs.js", "app/data/features.js", "app/data/features.js", "app/(main)/ai-cover-letter/id/page.jsx", "app/(main)/dashboard/_components/dashboard-view.jsx"],
   "exclude": ["node_modules"]
 }

@@ -1,22 +1,19 @@
 "use client"
 
-import { BrainIcon, BriefcaseIcon, LineChart, LucideProps, TrendingDown, TrendingUp } from 'lucide-react'
-import React, { FC, ForwardRefExoticComponent, JSX } from 'react'
+import { BrainIcon, BriefcaseIcon, LineChart,  TrendingDown, TrendingUp } from 'lucide-react'
 import { format, formatDistanceToNow } from "date-fns"
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Progress } from '@/components/ui/progress'
-import { Bar, BarChart, CartesianGrid, Rectangle, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
+import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
 
 const DashboardView = ({ insights }: any) => {
-    console.log("SalaryRanges", insights.salaryRanges)
     const salaryData = insights.salaryRanges.map((range: { max: number, min: number, role: string, median: number, location: string }) => ({
         name: range.role,
         min: range.min / 1000,
         max: range.max / 1000,
         median: range.median / 1000
     }))
-    console.log(salaryData)
     const getDemandLevelColor = (level: string) => {
         switch (level.toLowerCase()) {
             case "high":
