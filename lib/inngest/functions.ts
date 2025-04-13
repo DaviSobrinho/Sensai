@@ -13,7 +13,7 @@ export const generateIndustryInsights = inngest.createFunction(
         id: ""
     },
     { cron: "0 0 * * 0" },
-    async ({ event, step }) => {
+    async ({ event: _, step }) => {
         const industries = await step.run("Fetch industries", async () => {
             return await db.industryInsight.findMany({
                 select: { industry: true },
