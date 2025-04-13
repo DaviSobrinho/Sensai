@@ -161,7 +161,7 @@ export default function ResumeBuilder({ initialContent }: any) {
     }
 
 
-    const onSubmit = async (data: any) => {
+    const onSubmit = async () => {
         try {
             const formattedContent = previewContent
                 .replace(/\n/g, "\n")

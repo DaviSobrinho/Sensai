@@ -1,13 +1,12 @@
 "use client"
 
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card'
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card'
 import { format } from 'date-fns'
 import React, { useEffect, useState } from 'react'
 import { CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
 
 const PerformanceChart = ({ assessments }: any) => {
     const [chartData, setChartData] = useState([])
-    console.log("assessments", assessments[0].quizScore)
     useEffect(() => {
         if (assessments) {
             const formattedData = assessments.map((assessment: any) => ({
