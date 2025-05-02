@@ -1,6 +1,6 @@
 # 🚀 Sensai
 
-**Sensai** is a web application built with Next.js that provides personalized career and market insights for developers and tech professionals. Users can create their profiles, solve tech-related questions, track their progress, and generate optimized resumes based on their skills and goals.
+**Sensai** is a web application built with Next.js and consuming Gemini API, that provides personalized AI career and market insights for developers and tech professionals. Users can create their profiles, solve tech-related questions, track their progress, and generate optimized resumes based on their skills and goals.
 
 ### 🌐 Live Demo
 
@@ -15,7 +15,7 @@
 - Solve quizzes and questions related to your career path
 - Get personalized insights about the job market and your growth
 - Track your learning progress over time
-- Automatically generate professional resumes
+- Assists and generates professional resumes
 - Background task handling and automation with **Inngest**
 - Data persistence using **Prisma ORM**
 
@@ -28,7 +28,7 @@
 - **[Inngest](https://www.inngest.com/)** — Background jobs and serverless workflows
 - **[Prisma](https://www.prisma.io/)** — Database ORM
 - **[Vercel](https://vercel.com/)** — Hosting and deployment
-
+- **[Gemini API (Google AI)](https://deepmind.google/technologies/gemini/)** — Google's powerful large language model used to generate intelligent career insights, analyze user profiles, and assist in dynamic resume creation.
 ---
 
 ## 📦 Getting Started
